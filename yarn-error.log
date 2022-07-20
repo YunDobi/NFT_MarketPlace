@@ -2,7 +2,7 @@ Arguments:
   /Users/yun/.nvm/versions/node/v16.13.0/bin/node /Users/yun/.nvm/versions/node/v16.13.0/bin/yarnpkg install
 
 PATH: 
-  /Users/yun/.nvm/versions/node/v16.13.0/bin:/Users/yun/.rbenv/shims:/opt/homebrew/bin:/opt/homebrew/sbin:/Library/Frameworks/Python.framework/Versions/3.9/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Users/yun/Library/Application Support/JetBrains/Toolbox/scripts:/Users/yun/.rvm/bin
+  /Users/yun/.nvm/versions/node/v16.13.0/bin:/Users/yun/.nvm/versions/node/v16.13.0/bin:/Users/yun/.rbenv/shims:/opt/homebrew/bin:/opt/homebrew/sbin:/Library/Frameworks/Python.framework/Versions/3.9/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Users/yun/.nvm/versions/node/v16.13.0/bin:/Users/yun/.rbenv/shims:/opt/homebrew/bin:/opt/homebrew/sbin:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Users/yun/Library/Application Support/JetBrains/Toolbox/scripts:/Users/yun/.rvm/bin:/Users/yun/Library/Application Support/JetBrains/Toolbox/scripts:/Users/yun/.rvm/bin
 
 Yarn version: 
   1.22.19
