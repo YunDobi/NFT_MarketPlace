@@ -1,9 +1,15 @@
 import React, {useState} from "react";
-import {Text} from "react-native";
+import {View, SafeAreaView, FlatList, Text} from "react-native";
+
+//dummy data and images or css locations
+import {COLORS, NFTData} from "../constants";
+import { NFTcard, HomeHeader, FocusedStateBar } from "../components";
 
 function Home() {
   return (
-    <Text>Home</Text>
+    <SafeAreaView style={{flex: 1}}>
+      <FocusedStateBar background={COLORS.primary} />
+    </SafeAreaView>
   )
 }
 
