@@ -3,18 +3,19 @@ import { View, SafeAreaView, FlatList, Text } from "react-native";
 
 //dummy data and images or css locations
 import { COLORS, NFTData } from "../constants";
-import { NFTcard, HomeHeader, FocusedStatusBar } from "../components";
+import { NFTcard, HomeHeader, FocusedStatusBar, CircleButton, RectButton } from "../components";
 
 function Home() {
   return (
     <SafeAreaView style={{ flex: 1 }}>
+      {/* real top view point(time bettery bar) */}
       <FocusedStatusBar background={COLORS.primary}/>
 
       <View style={{ flex: 1 }}>
         <View style={{ zIndex: 0 }}>
           <FlatList
             data={NFTData}
-            renderItem={({ item }) => <Text>{item.name}</Text>}
+            renderItem={({ item }) => <NFTcard data={item}/>}
             keyExtractor={(item) => {item.id}}
             showsVerticalScrollIndicator={false}
             ListHeaderComponent={HomeHeader}
