@@ -7,13 +7,14 @@ import { NFTcard, HomeHeader, FocusedStatusBar, CircleButton, RectButton } from 
 
 function Home() {
   return (
-    <SafeAreaView style={{ flex: 1 }}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.primary}} key="container">
       {/* real top view point(time bettery bar) */}
-      <FocusedStatusBar background={COLORS.primary}/>
+      <FocusedStatusBar/>
 
-      <View style={{ flex: 1 }}>
-        <View style={{ zIndex: 0 }}>
+      <View style={{ flex: 1 }} key="body">
+        <View style={{ zIndex: 0 }} key="secondBody">
           <FlatList
+            key={NFTData.id}
             data={NFTData}
             renderItem={({ item }) => <NFTcard data={item}/>}
             keyExtractor={(item) => {item.id}}
