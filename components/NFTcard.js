@@ -8,7 +8,7 @@ import { NFTTitle, Ethprice, SubInfo } from "./SubInfo";
 import { CircleButton, RectButton } from "./Botton";
 
 const NFTcard = ({ data }) => {
-  const navigation = useNavigation;
+  const navigation = useNavigation();
   return (
     // container setting
     <View
@@ -62,7 +62,7 @@ const NFTcard = ({ data }) => {
       }}>
         <Ethprice price={data.price} />
         {/* Naviate to the Details page where we declaired from App.js, 33  */}
-        <RectButton minWidth={120} fontSize={SIZES.font} handlePress={() => {navigation.navigate('Details', {data})}}/>
+        <RectButton minWidth={120} fontSize={SIZES.font} handlePress={() => navigation.navigate("Details", {data})}/>
 
       </View>
     </View>

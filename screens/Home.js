@@ -9,14 +9,14 @@ function Home() {
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.primary}} key="container">
       {/* real top view point(time bettery bar) */}
-      <FocusedStatusBar/>
+      <FocusedStatusBar barStyle='light-content'/>
 
       <View style={{ flex: 1 }} key="body">
         <View style={{ zIndex: 0 }} key="secondBody">
           <FlatList
             key={NFTData.id}
             data={NFTData}
-            renderItem={({ item }) => <NFTcard data={item}/>}
+            renderItem={({ item }) => <NFTcard data={item} key={item.id}/>}
             keyExtractor={(item) => {item.id}}
             showsVerticalScrollIndicator={false}
             ListHeaderComponent={HomeHeader}
