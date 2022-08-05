@@ -4,7 +4,8 @@ import HomeHeader from "./HomeHeader";
 import { CircleButton, RectButton } from "./Botton";
 import DetailsDesc from "./DetailsDesc";
 import DetailsBid from "./DetailsBid";
+import { SubInfo } from "./SubInfo";
 
 export {
-  HomeHeader, NFTcard, FocusedStatusBar, CircleButton, RectButton, DetailsDesc, DetailsBid
+  HomeHeader, NFTcard, FocusedStatusBar, CircleButton, RectButton, DetailsDesc, DetailsBid, SubInfo
 }

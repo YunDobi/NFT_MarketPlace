@@ -8,7 +8,7 @@ import {
   FlatList,
 } from "react-native";
 
-import { COLORS, FONTS, SIZES, SHADOWS } from "../constants";
+import { COLORS, FONTS, SIZES, SHADOWS, assets } from "../constants";
 import {
   RectButton,
   CircleButton,
@@ -17,6 +17,29 @@ import {
   DetailsDesc,
   DetailsBid,
 } from "../components";
+
+const DetailsHeader = ({ data, navigation }) => (
+  <View style={{ width: "100%", height: 373 }}>
+    <Image
+      source={data.image}
+      resizeMode="cover"
+      style={{ width: "100%", height: "100%" }}
+    />
+
+    <CircleButton
+      imgUrl={assets.left}
+      handlePress={() => navigation.goBack()}
+      left={15}
+      top={StatusBar.currentHeight + 20}
+    />
+    <CircleButton
+      imgUrl={assets.heart}
+      handlePress={() => navigation.goBack()}
+      right={15}
+      top={StatusBar.currentHeight + 20}
+    />
+  </View>
+);
 
 function Details({ route, navigation }) {
   const { data } = route.params;
@@ -46,9 +69,30 @@ function Details({ route, navigation }) {
       <FlatList
         data={data.bids}
         renderItem={(item) => <DetailsBid bid={item} />}
-        // keyExtractor={(item) => item.id}
-        // showsVerticalScrollIndicator={false}
-        // contentContainerStyle={{ paddingBottom: SIZES.extraLarge * 3 }}
+        keyExtractor={(item) => item.id}
+        showsVerticalScrollIndicator={false}
+        contentContainerStyle={{ paddingBottom: SIZES.extraLarge * 3 }}
+        ListHeaderComponent={() => {
+          return (
+            <React.Fragment>
+              <DetailsHeader data={data} navigation={navigation} />
+              <SubInfo />
+              <View style={{padding: SIZES.font}}>
+                <DetailsDesc data={data} />
+                {data.bids.length > 0 && (
+                  <Text style={{
+                    fontSize: SIZES.font,
+                    fontFamily: FONTS.semiBold,
+                    color: COLORS.primary
+                  }}>
+                    Current Bid
+                  </Text>
+                )}
+              </View>
+
+            </React.Fragment>
+          );
+        }}
       />
     </SafeAreaView>
   );
