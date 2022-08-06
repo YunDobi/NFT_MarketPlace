@@ -3,7 +3,7 @@ import React from "react";
 
 import { COLORS, FONTS, SIZES, SHADOWS, assets } from "../constants";
 
-const HomeHeader = ({onChange}) => {
+const HomeHeader = ({onSearch}) => {
   return (
     <View
       style={{
@@ -85,7 +85,7 @@ const HomeHeader = ({onChange}) => {
             resizeMode="contain"
             style={{ width: 20, height: 20, marginRight: SIZES.base }}
           />
-          <TextInput placeholder="search your NFTs" style={{flex: 1}} onChangeText={onChange} />
+          <TextInput placeholder="search your NFTs" style={{flex: 1}} onChangeText={onSearch} />
         </View>
       </View>
     </View>
