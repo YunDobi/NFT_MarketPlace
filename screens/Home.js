@@ -27,7 +27,7 @@ function Home() {
       {/* real top view point(time bettery bar) */}
       <FocusedStatusBar barStyle='light-content'/>
 
-      <View style={{ flex: 1 }} key="body">
+      <View style={{ flex: 1 }} key="body" testID="Home">
         <View style={{ zIndex: 0 }} key="secondBody">
           <FlatList
             key={NFTData.id}
